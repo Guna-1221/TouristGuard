@@ -4,11 +4,6 @@ import { v4 as uuidv4 } from "uuid";
 
 const router = Router();
 
-/**
- * Issue a blockchain-based digital ID for a tourist
- * POST /api/issue-id
- * Body: { email, fullName, nationality, bloodType, allergies, emergencyContact, tripItinerary, tripDuration }
- */
 router.post("/issue-id", async (req, res) => {
   try {
     const {
