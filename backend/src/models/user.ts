@@ -14,6 +14,9 @@ export interface IUser extends Document {
   tripItinerary?: string[];   // optional
   createdAt: Date;
   updatedAt: Date;
+  digitalId?:string;
+  tripDuration?:number
+  validTill?:Date;
 }
 
 const userSchema = new Schema<IUser>(
