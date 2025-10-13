@@ -1,0 +1,42 @@
+# Node modules
+/node_modules
+
+# Compilation output
+/dist
+
+# pnpm deploy output
+/bundle
+
+# Hardhat Build Artifacts
+/artifacts
+
+# Hardhat compilation (v2) support directory
+/cache
+
+# Typechain output
+/types
+
+# Hardhat coverage reports
+/coverage
+
+# Environment variable files
+.env
+backend/.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / Editor settings
+.vscode/
+.idea/
+.DS_Store
+
+# Build artifacts for frontend
+/build
+/.parcel-cache
+
+# Temporary files
+*.tmp
+*.log
