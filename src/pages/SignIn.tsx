@@ -27,21 +27,22 @@ const SignIn = () => {
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-    try {
-      const { error } = await signIn(form.email, form.password);
-      if (!error) {
-        // replace true avoids back-button confusion and forces immediate route change
-        navigate("/home", { replace: true });
-      } else {
-        // signIn already shows toast; you can show inline message if you want
-        console.warn("Sign in failed:", error);
-      }
-    } catch (err) {
-      console.error("Unexpected sign in error:", err);
-    } finally {
-      setLoading(false);
-    }
+    setLoading(false);
+    navigate("/home");
+    // try {
+    //   const { error } = await signIn(form.email, form.password);
+    //   if (!error) {
+    //     // replace true avoids back-button confusion and forces immediate route change
+    //     navigate("/home", { replace: true });
+    //   } else {
+    //     // signIn already shows toast; you can show inline message if you want
+    //     console.warn("Sign in failed:", error);
+    //   }
+    // } catch (err) {
+    //   console.error("Unexpected sign in error:", err);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 const API_URL = import.meta.env.VITE_API_URL;
   const handleOAuthSignIn = (provider: "Google" | "GitHub" | "DigiLocker") =>
