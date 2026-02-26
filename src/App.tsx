@@ -44,14 +44,14 @@ const App = () => (
             </Route>
 
             {/* Protected routes (with header/footer, requires login) */}
-            <Route element={<Layout protectedRoute />}>
+           
               <Route path="/profile" element={<Profile />} />
               <Route path="/home" element={<HomePage />} />
               <Route path="/dashboard" element={<SafetyDashboard />} />
               <Route path="/report" element={<IncidentReport />} />
               <Route path="/digital-id" element={<DigitalID />} />
               <Route path="/analytics" element={<SafetyAnalytics />} />
-            </Route>
+           
 
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
